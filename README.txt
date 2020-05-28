@@ -1,1 +1,0 @@
-Portfolio website by Vanouphon Sirisouk
