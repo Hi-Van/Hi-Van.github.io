@@ -1,0 +1,1008 @@
+/*Desktop View*/
+@media only screen and (min-width: 1367px) {
+    body {
+        width: auto;
+        height: auto;
+        background: linear-gradient(90deg, #A8DADC 0%, #C6FDFF 100%);
+        overflow-x: hidden;
+    }
+    
+    .typewriter h1 {
+        position: absolute;
+        left: 1.85em;
+        top: 4.7em;
+        color: #1D3557;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 72px;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .1em solid; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 2s steps(14, end),
+          blink-caret .8s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 28% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        40% { border-color: #457B9D }
+      }
+    
+    .By{
+        position: absolute;
+        width: 413px;
+        height: 35px;
+        left: 3.9em;
+        top: 11.2em;
+    
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+    
+        color: #457B9D;
+        animation: fade-in 3s;
+    }
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .SVG {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        left: 48em;
+        top: 12em;
+    }
+    
+    /*Navigation*/
+    .nav-container {
+        white-space: nowrap;
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        top: 0px;
+        left: 0px;
+        background: #FDFDFD;
+    }
+    
+    .nav-wrap {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 65px;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    
+    .nav-tabs li {
+        margin-right: 25px;
+        list-style: none;
+    }
+    
+    .nav-tabs li button{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        border: none;
+        color: #3F3D56;
+        background-color: #FDFDFD;
+        white-space: nowrap;
+        transition: transform .6s ease;
+    }
+    
+    .nav-tabs li button:hover {
+        transform: scale(1.05);
+        color: #FF6584;
+    }
+    
+    .vl{
+        border-left: 2px solid #C4C4C4;
+        margin-right: 25px;
+    }
+    
+    .logo {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 42px;
+    
+        color: #457B9D;
+    }
+    
+    /*Information Buttons*/
+    .buttons ul{
+        display: flex;
+        position: absolute;
+        top: 37em;
+        left: 6.15em;
+    }
+    
+    .buttons li {
+        list-style: none;
+        margin-right: 30px;
+    }
+    
+    .buttons li button{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        text-decoration: none;
+        color: #3F3D56;
+        background-color: #FDFDFD;
+        padding: 5px 10px;
+        box-shadow: 5px 10px;
+        transition: transform 0.3s ease;
+    }
+    
+    .buttons li button:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/*iPad pro*/
+@media only screen and (min-width: 1200px) and (max-width: 1366.8px) and (orientation: landscape) {
+    body {
+        width: auto;
+        height: auto;
+        background: linear-gradient(90deg, #A8DADC 0%, #C6FDFF 100%);
+        overflow-x: hidden;
+    }
+    
+    .typewriter h1 {
+        position: absolute;
+        left: 1.85em;
+        top: 4.7em;
+        color: #1D3557;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 72px;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .1em solid; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 2s steps(14, end),
+          blink-caret .8s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 28% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        40% { border-color: #457B9D }
+      }
+    
+    .By{
+        position: absolute;
+        width: 413px;
+        height: 35px;
+        left: 3.9em;
+        top: 11.2em;
+    
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+    
+        color: #457B9D;
+        animation: fade-in 3s;
+    }
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .SVG {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        left: 40em;
+        top: 12em;
+    }
+    
+    /*Navigation*/
+    .nav-container {
+        white-space: nowrap;
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        top: 0px;
+        left: 0px;
+        background: #FDFDFD;
+    }
+    
+    .nav-wrap {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 65px;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    
+    .nav-tabs li {
+        margin-right: 25px;
+        list-style: none;
+    }
+    
+    .nav-tabs li button{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        border: none;
+        color: #3F3D56;
+        background-color: #FDFDFD;
+        white-space: nowrap;
+        transition: transform .6s ease;
+    }
+    
+    .nav-tabs li button:hover {
+        transform: scale(1.05);
+        color: #FF6584;
+    }
+    
+    .vl{
+        border-left: 2px solid #C4C4C4;
+        margin-right: 25px;
+    }
+    
+    .logo {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 42px;
+    
+        color: #457B9D;
+    }
+    
+    /*Information Buttons*/
+    .buttons ul{
+        display: flex;
+        position: absolute;
+        top: 32em;
+        left: 6.15em;
+    }
+    
+    .buttons li {
+        list-style: none;
+        margin-right: 30px;
+    }
+    
+    .buttons li button{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        text-decoration: none;
+        color: #3F3D56;
+        background-color: #FDFDFD;
+        padding: 5px 10px;
+        box-shadow: 5px 10px;
+        transition: transform 0.3s ease;
+    }
+    
+    .buttons li button:hover {
+        transform: translateY(-3px);
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199.8px) and (orientation: portrait) {
+    body {
+        width: auto;
+        height: auto;
+        background: linear-gradient(90deg, #A8DADC 0%, #C6FDFF 100%);
+        overflow-x: hidden;
+    }
+    
+    .typewriter h1 {
+        position: absolute;
+        left: 1.85em;
+        top: 1.8em;
+        color: #1D3557;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 92px;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .1em solid; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 2s steps(14, end),
+          blink-caret .8s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 60% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        40% { border-color: #457B9D }
+      }
+    
+    .By{
+        position: absolute;
+        width: 413px;
+        height: 35px;
+        left: 6.55em;
+        top: 20em;
+    
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+    
+        color: #457B9D;
+        animation: fade-in 3s;
+    }
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .SVG {
+        position: absolute;
+        width: 65%;
+        height: auto;
+        left: 16em;
+        top: 20em;
+    }
+    
+    /*Navigation*/
+    .nav-container {
+        white-space: nowrap;
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        top: 0px;
+        left: 0px;
+        background: #FDFDFD;
+    }
+    
+    .nav-wrap {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 65px;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    
+    .nav-tabs li {
+        margin-right: 15px;
+        list-style: none;
+    }
+    
+    .nav-tabs li button{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 23px;
+        border: none;
+        color: #3F3D56;
+        background-color: #FDFDFD;
+        white-space: nowrap;
+        transition: transform .6s ease;
+    }
+    
+    .nav-tabs li button:hover {
+        transform: scale(1.05);
+        color: #FF6584;
+    }
+    
+    .vl{
+        border-left: 2px solid #C4C4C4;
+        margin-right: 15px;
+    }
+    
+    .logo {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 42px;
+        margin-left: 20px;
+        align-items: center;
+
+        color: #457B9D;
+    }
+    
+    /*Information Buttons*/
+    .buttons ul{
+        display: flex;
+        position: absolute;
+        top: 55em;
+        left: 4em;
+    }
+    
+    .buttons li {
+        list-style: none;
+        margin-right: 30px;
+    }
+    
+    .buttons li button{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 42px;
+        text-decoration: none;
+        color: #3F3D56;
+        background-color: #FDFDFD;
+        padding: 5px 10px;
+        box-shadow: 5px 10px;
+        transition: transform 0.3s ease;
+    }
+    
+    .buttons li button:hover {
+        transform: translateY(-3px);
+    }
+}
+
+
+/*Tablet*/
+@media only screen and (min-width: 992px) and (max-width: 1199.8px) and (orientation: landscape) {
+    body {
+        width: auto;
+        height: auto;
+        background: linear-gradient(90deg, #A8DADC 0%, #C6FDFF 100%);
+        overflow-x: hidden;
+    }
+    
+    .typewriter h1 {
+        position: absolute;
+        left: 1em;
+        top: 3.5em;
+        color: #1D3557;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .1em solid; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 2s steps(14, end),
+          blink-caret .8s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 28% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        40% { border-color: #457B9D }
+      }
+    
+    .By{
+        position: absolute;
+        width: 413px;
+        height: 35px;
+        left: 1.95em;
+        top: 8em;
+    
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+    
+        color: #457B9D;
+        animation: fade-in 3s;
+    }
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .SVG {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        left: 30em;
+        top: 12em;
+    }
+    
+    /*Navigation*/
+    .nav-container {
+        white-space: nowrap;
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        top: 0px;
+        left: 0px;
+        background: #FDFDFD;
+    }
+    
+    .nav-wrap {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 65px;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    
+    .nav-tabs li {
+        margin-right: 15px;
+        list-style: none;
+    }
+    
+    .nav-tabs li button{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 26px;
+        border: none;
+        color: #3F3D56;
+        background-color: #FDFDFD;
+        white-space: nowrap;
+        transition: transform .6s ease;
+    }
+    
+    .nav-tabs li button:hover {
+        transform: scale(1.05);
+        color: #FF6584;
+    }
+    
+    .vl{
+        border-left: 2px solid #C4C4C4;
+        margin-right: 15px;
+    }
+    
+    .logo {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 42px;
+        margin-left: 20px;
+        align-items: center;
+
+        color: #457B9D;
+    }
+    
+    /*Information Buttons*/
+    .buttons ul{
+        display: flex;
+        position: absolute;
+        top: 25em;
+        left: 2em;
+    }
+    
+    .buttons li {
+        list-style: none;
+        margin-right: 30px;
+    }
+    
+    .buttons li button{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        text-decoration: none;
+        color: #3F3D56;
+        background-color: #FDFDFD;
+        padding: 5px 10px;
+        box-shadow: 5px 10px;
+        transition: transform 0.3s ease;
+    }
+    
+    .buttons li button:hover {
+        transform: translateY(-3px);
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.8px) and (orientation: portrait) {
+    body {
+        width: auto;
+        height: auto;
+        background: linear-gradient(90deg, #A8DADC 0%, #C6FDFF 100%);
+        overflow-x: hidden;
+    }
+    
+    .typewriter h1 {
+        position: absolute;
+        left: 1.85em;
+        top: 1.2em;
+        color: #1D3557;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 92px;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .1em solid; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 2s steps(14, end),
+          blink-caret .8s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 60% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        40% { border-color: #457B9D }
+      }
+    
+    .By{
+        position: absolute;
+        width: 413px;
+        height: 35px;
+        left: 6.55em;
+        top: 20em;
+    
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+    
+        color: #457B9D;
+        animation: fade-in 3s;
+    }
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .SVG {
+        position: absolute;
+        width: 65%;
+        height: auto;
+        left: 16em;
+        top: 20em;
+    }
+    
+    /*Navigation*/
+    .nav-container {
+        white-space: nowrap;
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        top: 0px;
+        left: 0px;
+        background: #FDFDFD;
+    }
+    
+    .nav-wrap {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 65px;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    
+    .nav-tabs li {
+        margin-right: 15px;
+        list-style: none;
+    }
+    
+    .nav-tabs li button{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 23px;
+        border: none;
+        color: #3F3D56;
+        background-color: #FDFDFD;
+        white-space: nowrap;
+        transition: transform .6s ease;
+    }
+    
+    .nav-tabs li button:hover {
+        transform: scale(1.05);
+        color: #FF6584;
+    }
+    
+    .vl{
+        border-left: 2px solid #C4C4C4;
+        margin-right: 15px;
+    }
+    
+    .logo {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 42px;
+        margin-left: 20px;
+        align-items: center;
+
+        color: #457B9D;
+    }
+    
+    /*Information Buttons*/
+    .buttons ul{
+        display: flex;
+        position: absolute;
+        top: 55em;
+        left: 3.5em;
+    }
+    
+    .buttons li {
+        list-style: none;
+        margin-right: 30px;
+    }
+    
+    .buttons li button{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 42px;
+        text-decoration: none;
+        color: #3F3D56;
+        background-color: #FDFDFD;
+        padding: 5px 10px;
+        box-shadow: 5px 10px;
+        transition: transform 0.3s ease;
+    }
+    
+    .buttons li button:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/*Mobile*/
+@media only screen and (min-width: 768px) and (max-width: 991.8px) and (orientation: landscape) {
+    body {
+        width: auto;
+        height: auto;
+        background: linear-gradient(90deg, #A8DADC 0%, #C6FDFF 100%);
+        overflow-x: hidden;
+    }
+    
+    .typewriter h1 {
+        position: absolute;
+        left: 1.1em;
+        top: 2em;
+        color: #1D3557;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 58px;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .1em solid; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 2s steps(14, end),
+          blink-caret .8s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 39% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        40% { border-color: #457B9D }
+      }
+    
+    .By{
+        position: absolute;
+        width: 413px;
+        height: 35px;
+        left: 1.95em;
+        top: 5.2em;
+    
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+    
+        color: #457B9D;
+        animation: fade-in 3s;
+    }
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .SVG {
+        position: absolute;
+        width: 45%;
+        height: auto;
+        left: 31em;
+        top: 7em;
+    }
+    
+    /*Navigation*/
+    .nav-container {
+        white-space: nowrap;
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        top: 0px;
+        left: 0px;
+        background: #FDFDFD;
+    }
+    
+    .nav-wrap {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 65px;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    
+    .nav-tabs li {
+        margin-right: 15px;
+        list-style: none;
+    }
+    
+    .nav-tabs li button{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 23px;
+        border: none;
+        color: #3F3D56;
+        background-color: #FDFDFD;
+        white-space: nowrap;
+        transition: transform .6s ease;
+    }
+    
+    .nav-tabs li button:hover {
+        transform: scale(1.05);
+        color: #FF6584;
+    }
+    
+    .vl{
+        border-left: 2px solid #C4C4C4;
+        margin-right: 15px;
+    }
+    
+    .logo {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 42px;
+        margin-left: 20px;
+        align-items: center;
+
+        color: #457B9D;
+    }
+    
+    /*Information Buttons*/
+    .buttons ul{
+        display: flex;
+        position: absolute;
+        top: 17em;
+        left: 2em;
+    }
+    
+    .buttons li {
+        list-style: none;
+        margin-right: 30px;
+    }
+    
+    .buttons li button{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        text-decoration: none;
+        color: #3F3D56;
+        background-color: #FDFDFD;
+        padding: 5px 10px;
+        box-shadow: 5px 10px;
+        transition: transform 0.3s ease;
+    }
+    
+    .buttons li button:hover {
+        transform: translateY(-3px);
+    }
+}
