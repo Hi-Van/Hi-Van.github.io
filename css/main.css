@@ -1367,13 +1367,24 @@
     color: #FF6584;
 }
 
-.infoSection p{
+.infoSection p {
     text-align: justify;
 }
 
-.divider {
-    height: 2px;
-    background: #3F3D56;
+.SectionContainer {
+    justify-content: center;
+    display: grid;
+    grid-gap: 5em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+}
+
+.ProfilePic{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
 }
 
 /*Sticky SVGs*/
