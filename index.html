@@ -5,9 +5,29 @@
         <link href="main.css" rel="stylesheet">
     </head>
     <body>
-        <video autoplay muted loop id="backgroundVideo">
-            <source src="backgroundVideo.mp4" type="video/mp4">
-        </video>
-        <p>text text text text text text text text text text</p>
+        <header class="v-header container">
+            <div class="video-fullscreen-wrap">
+                <video autoplay muted loop id="backgroundVideo">
+                    <source src="backgroundVideo.mp4" autoplay loop muted type="video/mp4">
+                </video>
+            </div>
+            <div class="header-overlay"></div>
+            <div class="header-content">
+                <h1>Portfolio</h1>
+                <p>by Vanouphon Sirisouk</p>
+                
+            </div>
+        </header>
+
+        <nav class="navbar">
+            <span class="open-slide">
+                <a href="#">
+                    
+                </a>
+            </span>
+        </nav>
+        
     </body>
+
+    <script src="navbar.js"></script>
 </html>
