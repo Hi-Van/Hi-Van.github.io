@@ -1,85 +1,197 @@
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Van S.</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="icon" href="assets/Personal Logo.svg">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+        <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/rocket_1f680.png">
+        <title>Portfolio by Van S.</title>
+    </head>
+    <body>
+        <header class="v-header container" id="Home">
+            <div class="video-fullscreen-wrap">
+                <video autoplay muted loop id="backgroundVideo">
+                    <source src="backgroundVideo.mp4" autoplay loop muted type="video/mp4">
+                </video>
+            </div>
+            <div class="header-overlay"></div>
+            <div class="header-content">
+                <h1>VANOUPHON SIRISOUK</h1>
+                <p>FRONTEND ENGINEER</p>
+                <button><a href="#Experience">MORE</a></button>
+            </div>
+        </header>    
+        <nav class="navbar">
+            <span class="open-slide">
+                <a onclick="openSideMenu()">
+                    <img src="hamburger-menu.svg" alt="" class="hamburger-menu">
+                </a>
+            </span>
+        </nav>
 
-<body>
-    <!--Typerwriter Text-->
-    <div class="typewriter">
-        <h1>Home Page</h1>
-    </div>
+        <div id="side-menu" class="side-nav">
+            <a class="btn-close" onclick="closeSideMenu()">&times;</a>
+            <a href="#Home">HOME</a>
+            <a href="#Experience">EXPERIENCE</a>
+            <a href="#Projects">PROJECTS</a>
+            <a href="#About">ABOUT ME</a>
+            <a href="#Info">INFO</a>
+        </div>  
 
-    <!--Fade In Text-->
-    <div class="By">
-        Welcome.
-    </div>
-    <!--Button Container-->
-    <div class="buttons">
-        <ul>
-            <!--GitHub Button-->
-            <li>
-                <button onclick=" window.open('https://github.com/Hi-Van','_blank')">GITHUB</button>
-            </li>
+        <div class="bottom-wrapper">
+            <div class="Experience" id="Experience">
+                <div class="expHeader">
+                    <button><a href="#Home">Back</a></button>
+                    <h1>Experience 💻</h1>
+                </div>
+                <div class="exp-content">
+                    <div class="exp">
+                        <h1><b>UNIVERSITY OF CONNECTICUT</b> | CS & MATHEMATICS TUTOR</h1>
+                        <h2>FEB 2020 - MAY 2020 | Stamford, CT</h2>
+                        <p>- Explained technical concepts and issues to students, clearifying confusion set upon student knowledge</p>
+                        <p>- Communicated Computer Science & Calculus curriculum to students, efficiently creating study plans and identifying missing knowledge for students</p>
+                    </div>
 
-            <!--LinkedIn Button-->
-            <li>
-                <button onclick=" window.open('https://www.linkedin.com/in/vanouphon-sirisouk/','_blank')">LINKEDIN</button>
-            </li>
+                    <div class="exp">
+                        <h1><b>UNIVERSITY OF CONNECTICUT STAMFORD ENGINEER MAJORS</b> | FOUNDER</h1>
+                        <h2>AUG 2019 - PRESENT | Stamford, CT</h2>
+                        <p>- Collective body of students primarily in the School of Engineering at University of Connecticut Stamford regional campus</p>
+                        <p>- Attracted a total of 40+ students</p>
+                        <p>- Directed several teams of students, resulting in an overall reduction in stress & workload</p>
+                        <p>- Lead a team of 13 collaborative students, decreasing time spent on assignments by 30% - 40% on avg.</p>
+                    </div>
 
-            <!--Contact Button-->
-            <li>
-                <button onclick="window.location.href='about me.html'">CONTACT INFO</button>
-            </li>
-        </ul>
-    </div>
+                    <div class="exp">
+                        <h1><b>SUMMER OF SHIPPING</b> | CORE TEAM // FRONTEND ENGINEER</h1>
+                        <h2>MAY 2020 | summerofshipping.com</h2>
+                        <p>- Initiave group for students with cancelled internships for Summer 2020</p>
+                        <p>- Created an environment for students to ship projects under industry mentors, attracting 600+ studends & 70+ mentors globally</p>
+                        <p>- Developed a prototype design in Figma software, resulting in a responsive site compatible with multiple screen sizes and devices</p>
+                        <p>- Developed an internal search engine, which enabled users to search through internal database of media links & projects</p>
+                    </div>
+                </div>
+                <div class="expButtonContainer">
+                    <button><a href="#Projects">MY WORK</a></button>
+                </div>
+            </div>
 
-    <!--Navigation Container-->
-    <div class="nav-container">
-        <div class="nav-wrap">
-            <nav>
-
-                <!--Left Side Logo-->
-                <div class="logo">
-                    VANOUPHON SIRISOUK
+            <div class="Projects" id="Projects">
+                <div class="projHeader">
+                    <button><a href="#Experience">EXPERIENCE</a></button>
+                    <h1>Projects 🚀</h1>
                 </div>
 
-                <!--Navigation Tabs-->
-                <ul class="nav-tabs">
+                <div class="cardContainer">
 
-                    <!--Home Tab-->
-                    <li>
-                        <button onclick="window.location.href='index.html'">HOME</button>
-                    </li>
+                    <div class="card">
+                        <h1>Project Name</h1>
+                        <p>Description</p>
+                        <a href="#">Demo</a>
+                        <a href="#">Code</a>
+                    </div>
 
-                    <!--Projects Tab-->
-                    <div class="vl"></div>
-                    <li>
-                        <button onclick="window.location.href='projects.html'">PROJECTS</button>
-                    </li>
+                    <div class="card">
+                        <h1>Project Name</h1>
+                        <p>Description</p>
+                        <a href="#">Demo</a>
+                        <a href="#">Code</a>
+                    </div>
 
-                    <!--Resume Tab-->
-                    <div class="vl"></div>
-                    <li>
-                        <button onclick="window.location.href='resume.html'">RESUME</button>
-                    </li>
+                    <div class="card">
+                        <h1>Project Name</h1>
+                        <p>Description</p>
+                        <a href="#">Demo</a>
+                        <a href="#">Code</a>
+                    </div>
 
-                    <!--About Me Tab-->
-                    <div class="vl"></div>
-                    <li>
-                        <button onclick="window.location.href='about me.html'">ABOUT ME</button>
-                    </li>
-                </ul>
-            </nav>
+                    <div class="card">
+                        <h1>Project Name</h1>
+                        <p>Description</p>
+                        <a href="#">Demo</a>
+                        <a href="#">Code</a>
+                    </div>
+                </div>
+
+                <button><a href="#About">MY PROFILE</a></button>
+            </div>
+
+            <div class="About" id="About">
+                <div class="page">
+                    <div class="page-header">
+                        <button><a href="#Projects">MY WORK</a></button>
+                        <img src="Profile Picture.png" alt=" " class="Profile">
+                        <h1>ABOUT ME 🕵️‍♂️</h1>
+                    </div>
+                    <div class="page-content">
+                        <div class="abtSection">
+                            <h1>HOBBIES</h1>
+                            <p><b>DESTINY</b> Would be a shame if we'd 1v1'd</p>
+                            <p><b>PC BUILDING</b> Mine has RGB so it's faster</p>
+                            <p><b>BREAKDANCING</b> I've yet to break myself, so I'm probably doing it wrong</p>
+                            <p><b>MUSIC</b> I can play several instruments, just really badly</p>
+                            <p><b>WORKING OUT</b> I like being healthy</p>
+                            <p><b>ANIME</b> Still practicing my hand symbols for when the army tries to draft me</p>
+                        </div>
+
+                        <div class="abtSection">
+                            <h1>CLUBS & AFFILIATION</h1>
+                            <p><b>UCONN STAMFORD ENGINEER MAJORS GROUP | FOUNDER</b> I am the founder of a body of students who collaborate with each other to reduces the stresses of course work and academia. I noticed the reason many engineering students were lacking a social network and livelihood was due to a lack of time outside of academia. In order to solve that problem, I founded this group. We work to give engineering students the opportunity to live a healthy social life and truly have the college experience, instead of burying their lives in books</p>
+                            <p><b>SUMMER OF SHIPPING | CORE TEAM & FRONTEND ENGINEER</b> Taking part in SoS, it allowed me to grow exponentially quicker than if I confined myself to my univeristy campus. In SoS, I was exposed to many others who were far more experienced than me and connected to mentors who taught me industry standards and techniques. I am thankful to become part of this group as a core team member and frontend engineer, as this allowed me to explore many different technologies and avenues to grow my skills. it has, without a doubt, been a great substitute to an internship in the Summer of 2020</p>
+                        </div>
+
+                        <div class="abtSection">
+                            <h1>Who Am I</h1>
+                            <p><b>A NERD</b> I've grown to love learning and building new things. I also like going to my friends lectures for fun</p>
+                            <p><b>A WEED</b> Just name an anime and there's an 80% chance I've seen it. I can also give great reccomendations</p>
+                            <p><b>SOCIAL</b> As the founder of UConn Stamford Engineering Majors, I often reach out and network for new members, giving them the opportunity to experience more of a social life, this naturally turned some of these members into my close friends. Also, as a member of the group, I have more time to spend with my friends or on my own interests. I love hanging out with my friends and I'm grateful that I can do so</p>
+                            <p><b>RESOURCEFUL</b> Oftentimes, I learn things in an obsessive fashion. I usually become so encompassed in the material that I outpace the curriculum. Therefore, the professor doesn't have the time to address my questions during lecture. So I just try to find it out on my own</p>
+                        </div>
+
+                        <div class="abtSection">
+                            <h1>FINAL THOUGHTS</h1>
+                            <p><b>1.</b> Thank you for visiting my website</p>
+                            <p><b>2.</b> Please enjoy this video of a duck playing the drums</p>
+                            <iframe width="300" height="150" src="https://www.youtube.com/embed/vdnlptVP2B8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <button><a href="#Info">CONTACT ME</a></button>
+                </div>
+            </div>
+
+            <div class="Info" id="Info">
+                <div class="info-header">
+                    <button><a href="#About">MY PROFILE</a></button>
+                    <h1>CONTACT ME 📫</h1>
+                </div>
+                <div class="infoContainer">
+
+                    <div class="contact">
+                        <h1>EMAIL</h1>
+                        <p>[REDACTED]</p>
+                    </div>
+
+                    <div class="contact">
+                        <h1>PHONE</h1>
+                        <p>[REDACTED]</p>
+                    </div>
+
+                    <div class="contact">
+                        <h1>LINKEDIN</h1>
+                        <a href="https://www.linkedin.com/in/vanouphon-sirisouk/" target="blank_">https://www.linkedin.com/in/vanouphon-sirisouk/</a>
+                    </div>
+
+                    <div class="contact">
+                        <h1>GITHUB</h1>
+                        <a href="https://github.com/Hi-Van" target="blank_">https://github.com/Hi-Van</a>
+                    </div>
+
+                    <div class="contact">
+                        <h1>RESUME</h1>
+                        <a href="Resume_Vanouphon_Sirisouk__Censored_.pdf" target="blank_">Open Resume</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </body>
 
-    <!--Background SVG-->
-    <img src="/assets/undraw_landscape_mode_53ej.svg" alt=" " class="SVG">
-
-    <script src="main.js"></script>
-</body>
+    <script src="navbar.js"></script>
 </html>
