@@ -275,6 +275,7 @@ button {
   width: 85vw;
   margin-left: auto;
   margin-right: auto;
+  padding: 2em;
   margin-top: 5em;
   text-align: center;
   background: #eff0f3;
