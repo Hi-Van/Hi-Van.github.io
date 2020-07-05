@@ -243,6 +243,7 @@ button {
 
 .card a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .card button {
@@ -254,6 +255,7 @@ button {
   padding: 0.3em 1em;
   border: 3px solid #d68142;
   transition: 0.15s ease;
+  cursor: pointer;
 }
 
 .card button:hover {
