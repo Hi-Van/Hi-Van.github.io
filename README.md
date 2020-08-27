@@ -91,77 +91,44 @@ The side navigation uses two simple JavaScript functions ```openSideMenu()``` an
 
 <img src="./experience.PNG" width="600"/>
 
-This component page is the first component in the website. It integrates the Navigation and Socials components within it. Below is the entire code for the Home component:
+This page lists off my relevant experience. Each experience item has its own div container labelled as ```exp```, the code for which is shown below:
 
 ```
-import React from 'react';
-import './componentCSS/home.css';
-import Navigation from './navigation';
-import Socials from './socials';
-
-function Home() {
-    return (
-        <div id="home">
-            <Socials />
-            <div className="neon-sign">
-                <div className="title">Vanouphon Sirisouk</div>
-                <div className="subtitle">software developer</div>
-            </div>
-            <Navigation />
-        </div>
-    );
-}
-
-export default Home;
-```
-
-The component can be imported and used as:
-```
-import Home from './components/home';
-
-function App() {
-  return (
-    <div className="App">
-      <Home />
-    </div>
-  );
-}
-
-export default App;
+                    <div class="exp">
+                        <h1><b>UNIVERSITY OF CONNECTICUT STAMFORD ENGINEER MAJORS</b> | FOUNDER</h1>
+                        <h2>AUG 2019 - PRESENT | Stamford, CT</h2>
+                        <p>- Collective body of students primarily in the School of Engineering at University of Connecticut Stamford regional campus</p>
+                        <p>- Attracted a total of 40+ students</p>
+                        <p>- Directed several teams of students, resulting in an overall reduction in stress & workload</p>
+                        <p>- Lead a team of 13 collaborative students, decreasing time spent on assignments by 30% - 40% on avg.</p>
+                    </div>
 ```
 
 ### Projects
 
 <img src="./projects.PNG" width="600"/>
 
-This component is a row of links to different components of my website. It uses flex and flex-wrap in order to build a more responsive styling:
+This page lists off all the current projects I have worked on so far. All projects are contained in individual cards, the code for which can be found in the snippet below:
 ```
-  .nav-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 4rem;
-  margin-bottom: 8rem;
+<div class="card">
+                        <h1>!Picky 🥡 <b>[IN PROGRESS]</b></h1>
+                        <p>Restaurant Locator Web App. Built using ReactJs, Google Maps API, Places API, Geocoding API, and Material UI</p>
+                        <a href="https://github.com/Hi-Van/Not-Picky" target="_blank"><button>Code</button></a>
+                        <a href="https://not-picky.herokuapp.com/" target="_blank"><button>Demo</button></a>
+                    </div>
+```
+
+Like the [experience](#experience) page, the project cards are contained within a parent div labelled ```cardContainer```. The ```cardContainer``` div also uses grid and autofit, with a breakpoint of 300px width per card. The CSS code can be found in the snippet below:
+
+```
+.cardContainer {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em;
 }
 ```
 
-The component can be imported and used as:
-```
-import Navigation from './navigation';
-
-function Home() {
-    return (
-        <div id="home">
-            <div className="neon-sign">
-                // more html
-            </div>
-            <Navigation />
-        </div>
-    );
-}
-
-export default Home;
-```
 ### About Me
 
 <img src="./about-me.PNG" width="600"/>
