@@ -62,7 +62,7 @@ export default App;
 
 ### Side Nav
 
-<img src="./experience.PNG" width="600"/>
+<img src="./side-nav.PNG" width="600"/>
 
 This component page is a list of my past relevant experiences. Each experience is separated into its own div:
 
@@ -92,7 +92,7 @@ export default App;
 
 ### Experience
 
-<img src="./home.PNG" width="600"/>
+<img src="./experience.PNG" width="600"/>
 
 This component page is the first component in the website. It integrates the Navigation and Socials components within it. Below is the entire code for the Home component:
 
@@ -135,7 +135,7 @@ export default App;
 
 ### Projects
 
-<img src="./navigation.PNG" width="600"/>
+<img src="./projects.PNG" width="600"/>
 
 This component is a row of links to different components of my website. It uses flex and flex-wrap in order to build a more responsive styling:
 ```
@@ -167,7 +167,7 @@ export default Home;
 ```
 ### About Me
 
-<img src="./socials.PNG" width="600"/>
+<img src="./about-me.PNG" width="600"/>
 
 This component is a row of links, the same as the navigation component, but uses a different text color and positioning. It also uses flex and wlex-wrap to promote a more responsive styling:
 
@@ -198,7 +198,7 @@ export default Home;
 
 ### Contact Info
 
-<img src="./projects.PNG" width="600"/>
+<img src="./info.PNG" width="600"/>
 
 This component page displays the projects I have worked on so far. It integrates ```<HoverVideoPlayer videoSrc="Video Source Here">``` from the ```react-hover-video-player``` dependency, so it needs to be imported as ```import HoverVideoPlayer from 'react-hover-video-player';``` for it pause videos on hover. Each project is contained within an individual div, that uses grid and autofit in order to promote responsive styling:
 
