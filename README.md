@@ -24,70 +24,67 @@ This website is built using HTML and CSS. It is made with the intention of being
 
 <img src="./home.PNG" width="600"/>
 
-This is the landing div on my website. 
+This is the landing div on my website. It has a video div, color layer div, and content div. The HTML code for the home page can be found in the snippet below:
 
-Orange
 ```
-  font-family: "Vibur", cursive;
-  font-style: italic;
-  text-shadow: 0 0 1vw #1041ff, 0 0 3vw #1041ff, 0 0 10vw #1041ff,
-    0 0 10vw #1041ff, 0 0 0.4vw #8bfdfe;
-  color: #28d7fe;
-```
-
-Blue
-```
-  font-family: "Vibur", cursive;
-  font-style: italic;
-  text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,
-    0 0 10vw #fa1c16, 0 0 0.4vw #fed128;
-  color: #fed128;
-```
-
-
-The component can be imported and used as:
-```
-import AboutMe from './components/about-me';
-
-function App() {
-  return (
-    <div className="App">
-      <AboutMe />
-    </div>
-  );
-}
-
-export default App;
+        <header class="v-header container" id="Home">
+        
+            <div class="video-fullscreen-wrap">
+                <video autoplay muted loop id="backgroundVideo">
+                    <source src="backgroundVideo.mp4" autoplay loop muted type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="header-overlay"></div>
+            
+            <div class="header-content">
+                <h1>VANOUPHON SIRISOUK</h1>
+                <p>SOFTWARE DEVELOPER</p>
+                <a href="#Experience"><button>MORE</button></a>
+            </div>
+        </header>
 ```
 
 ### Side Nav
 
 <img src="./side-nav.PNG" width="150" height="400"/>
 
-This component page is a list of my past relevant experiences. Each experience is separated into its own div:
+The side navigation uses two simple JavaScript functions ```openSideMenu()``` and ```closeSideMenu()```. The component consists of two different divs, the ```hamburger-menu``` div and the ```side-nav``` div. When the link in the ```hamburger-menu``` div is clicked, the ```onclick``` will trigger the ```opensideMenu()``` function to display the ```side-nav``` div. When the ```side-nav``` div is open, there is a link when clicked, will trigger an ```onClick``` and cuase the ```closeSideMenu()``` function to run:
 
 ```
-  <div className="exp-div">
-    <div className="exp-title">Univeristy of Connecticut // CS & Mathematics Tutor </div>
-    <div className="exp-desc">Feb 2020 - May 2020 // Stamford, CT</div>
-    <div className="exp-desc">- Explained technical concepts and issues to students, clarifying confusion set upon student knowledge</div>
-    <div className="exp-desc">- Communicated Computer Science & Calculus curriculum to students, creating study plans and identifying missing knowledge for students</div>
-  </div>
-```
+        // HTML Code
+        
+        <nav class="navbar">
+            <span class="open-slide">
+                <a onclick="openSideMenu()">
+                    <img src="hamburger-menu.svg" alt="" class="hamburger-menu">
+                </a>
+            </span>
+        </nav>
 
-The component can be imported and used as:
-```
-import Experience from './components/experience';
-
-function App() {
-  return (
-    <div className="App">
-      <Experience />
-    </div>
-  );
-}
-
-export default App;
+        <div id="side-menu" class="side-nav">
+            <a class="btn-close" onclick="closeSideMenu()">&times;</a>
+            <a href="#Home">HOME</a>
+            <a href="#Experience">EXPERIENCE</a>
+            <a href="#Projects">PROJECTS</a>
+            <a href="#About">ABOUT ME</a>
+            <a href="#Info">INFO</a>
+        </div>
+        
+        
+        // JavaScript Code
+        
+        function openSideMenu() {
+          document.getElementById('side-menu').style.zIndex = '3';
+          document.getElementById('side-menu').style.width = '250px';
+          document.getElementById('side-menu').style.opacity = '0.95';
+        }
+        
+        function closeSideMenu() {
+          document.getElementById('side-menu').style.zIndex = '-1';
+          document.getElementById('side-menu').style.width = '0px';
+          document.getElementById('side-menu').style.opacity = '0';
+        }        
 ```
 
 ### Experience
