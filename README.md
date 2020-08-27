@@ -118,7 +118,7 @@ This page lists off all the current projects I have worked on so far. All projec
                     </div>
 ```
 
-Like the [experience](#experience) page, the project cards are contained within a parent div labelled ```cardContainer```. The ```cardContainer``` div also uses grid and autofit, with a breakpoint of 300px width per card. The CSS code can be found in the snippet below:
+The project cards are contained within a parent div labelled ```cardContainer```. The ```cardContainer``` div also uses grid and autofit, with a breakpoint of 300px width per card. The CSS code can be found in the snippet below:
 
 ```
 .cardContainer {
