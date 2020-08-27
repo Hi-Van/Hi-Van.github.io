@@ -60,7 +60,7 @@ function App() {
 export default App;
 ```
 
-### Experience
+### Side Nav
 
 <img src="./experience.PNG" width="600"/>
 
@@ -90,7 +90,7 @@ function App() {
 export default App;
 ```
 
-### Home
+### Experience
 
 <img src="./home.PNG" width="600"/>
 
@@ -133,7 +133,7 @@ function App() {
 export default App;
 ```
 
-### Navigation
+### Projects
 
 <img src="./navigation.PNG" width="600"/>
 
@@ -165,7 +165,7 @@ function Home() {
 
 export default Home;
 ```
-### Socials
+### About Me
 
 <img src="./socials.PNG" width="600"/>
 
@@ -196,7 +196,7 @@ function Home() {
 export default Home;
 ```
 
-### Projects
+### Contact Info
 
 <img src="./projects.PNG" width="600"/>
 
@@ -243,65 +243,3 @@ function App() {
 
 export default App;
 ```
-
-### Skills
-
-<img src="./skills.PNG" width="600"/>
-
-This component page lists my skills into two different categories: development and other skills. It uses two skill divs in order to separate the skills between them. Like the projects component, it uses css grid and autofit in order to promote a moe repsonsive styling:
-
-```
-                <- HTML Code ->
-                
-            <div className="skills-wrapper">
-                <div className="skills-div">
-                    <div className="exp-title">development</div>
-                    <div className="exp-desc">HTML</div>
-                    <div className="exp-desc">CSS</div>
-                    <div className="exp-desc">JavaScript</div>
-                    <div className="exp-desc">ReactJS</div>
-                    <div className="exp-desc">NextJS</div>
-                    <div className="exp-desc">Python</div>
-                    <div className="exp-desc">R5RS Racket Lisp</div>
-                    <div className="exp-desc">Data Structures</div>
-                    <div className="exp-desc">Data Algorithms</div>
-                    <div className="exp-desc">Bash</div>
-                    <div className="exp-desc">Git</div>
-                    <div className="exp-desc">Figma</div>
-                    <div className="exp-desc">Basic UI Design</div>
-                    <div className="exp-desc">Basic UX Design</div>
-                    <div className="exp-desc">Wire Framing</div>
-                </div>
-                
-                <div className="skills-div">
-                  //more HTML...
-                
-                <- CSS ->
-                
-                .skills-wrapper {
-                  display: grid;
-                  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-                }
-```
-
-The component can be imported and used as:
-```
-import Skills from './components/skills';
-
-function App() {
-  return (
-    <div className="App">
-      <Skills />
-    </div>
-  );
-}
-
-export default App;
-```
-
-# Dependencies
-
-My portfolio uses the following dependencies in order to function:
-
-* [ReactJS](https://reactjs.org/) - A JavaScript library for building user interfaces.
-* [react-hover-video-player](https://github.com/Gyanreyer/react-hover-video-player) - play videos on hover!
