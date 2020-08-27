@@ -108,7 +108,7 @@ This page lists off my relevant experience. Each experience item has its own div
 
 <img src="./projects.PNG" width="600"/>
 
-This page lists off all the current projects I have worked on so far. All projects are contained in individual cards, the code for which can be found in the snippet below:
+This page lists off all the current projects I had worked on at the time. All projects are contained in individual cards, the code for which can be found in the snippet below:
 ```
 <div class="card">
                         <h1>!Picky 🥡 <b>[IN PROGRESS]</b></h1>
@@ -133,77 +133,52 @@ The project cards are contained within a parent div labelled ```cardContainer```
 
 <img src="./about-me.PNG" width="600"/>
 
-This component is a row of links, the same as the navigation component, but uses a different text color and positioning. It also uses flex and wlex-wrap to promote a more responsive styling:
+The about me page is styled to mimic a paper with a orange background. It contains divs labelled ```abtSection``` to contain information into separate sections. An example of how the ```abtSection``` is used is found in the snippet below:
 
 ```
-.social-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+                <div class="abtSection">
+                    <h1>HOBBIES</h1>
+                    <p><b>DESTINY</b> Would be a shame if we'd 1v1'd</p>
+                    <p><b>PC BUILDING</b> Mine has RGB so it's faster</p>
+                    <p><b>BREAKDANCING</b> I've yet to break myself, so I'm probably doing it wrong</p>
+                    <p><b>MUSIC</b> I can play several instruments, just really badly</p>
+                    <p><b>WORKING OUT</b> I like being healthy</p>
+                    <p><b>ANIME</b> Still practicing my hand symbols for when the army tries to draft me</p>
+                </div>
+                        
+
+```
+
+Each ```abtScetion``` div is contained a parent div labelled ```page-content```, which uses grid and autofit with a 300px width breakpoint to promote more responsive design. The CSS code for ```page-content``` is found in the following snippet:
+```
+.page-content {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em;
 }
-```
-
-This component can be import and used as:
-```
-import Socials from './socials';
-
-function Home() {
-    return (
-        <div id="home">
-            <Socials />
-            <div className="neon-sign">
-              // more html
-            </div>
-        </div>
-    );
-}
-
-export default Home;
 ```
 
 ### Contact Info
 
 <img src="./info.PNG" width="600"/>
 
-This component page displays the projects I have worked on so far. It integrates ```<HoverVideoPlayer videoSrc="Video Source Here">``` from the ```react-hover-video-player``` dependency, so it needs to be imported as ```import HoverVideoPlayer from 'react-hover-video-player';``` for it pause videos on hover. Each project is contained within an individual div, that uses grid and autofit in order to promote responsive styling:
+This component page displays a set of social links, contact information, as well as a legacy version of my resume. Each link is contained within a div labelled  ```contact```. An example of use from my website can be found in the snippet below:
 
 ```
-              <-HTML CODE->
-              
-              <div className="proj-div">
-                <HoverVideoPlayer className="proj-display" videoSrc={newPortfolio} autoplay="true" />
-                <div className="proj-text">
-                    <div className="exp-title">Portfolio Website V4</div>
-                    <div className="exp-desc">The newest iteration of my portfolio website, hosted by Github Pages. Built using CSS, ReactJS</div>
-                    <div>
-                        <a
-                            href="https://github.com/Hi-Van/portfolio"
-                            target="_blank" rel="noopener noreferrer"><button className="btn-alt">code</button></a>
-                    </div>
-                </div>
-            </div>
-            
-            <- CSS ->
-            
-            * The auto fit line means that the grid will create a new row when the grid items can no longer fit with a width of 300px to 1fr
-            .proj-div {
-              display: grid;
-              grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-              margin-bottom: 16rem;
-            }
+               <div class="contact">
+                   <h1>GITHUB</h1>
+                   <a href="https://github.com/Hi-Van" target="blank_">https://github.com/Hi-Van</a>
+               </div>
 ```
 
-The component can be imported and used as:
+Each of the ```contact``` divs are contained within a parent div labelled ```infoContainer```. The ```infocontainer``` parent div uses grid and autofit with a breakpoint of 300px width per ```contact```. The exact CSS code for the ```infoContainer``` div can be found in the following snippet:
 ```
-import Projects from './components/projects';
-
-
-function App() {
-  return (
-    <div className="App">
-      <Projects />
-    </div>
-  );
+.infoContainer {
+  margin-top: 10em;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 4em;
 }
-
-export default App;
 ```
