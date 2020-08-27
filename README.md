@@ -62,7 +62,7 @@ export default App;
 
 ### Side Nav
 
-<img src="./side-nav.PNG" width="600"/>
+<img src="./side-nav.PNG" width="150" height="400"/>
 
 This component page is a list of my past relevant experiences. Each experience is separated into its own div:
 
