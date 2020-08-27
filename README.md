@@ -149,7 +149,7 @@ The about me page is styled to mimic a paper with a orange background. It contai
 
 ```
 
-Each ```abtScetion``` div is contained a parent div labelled ```page-content```, which uses grid and autofit with a 300px width breakpoint to promote more responsive design. The CSS code for ```page-content``` is found in the following snippet:
+Each ```abtSection``` div is contained a parent div labelled ```page-content```, which uses grid and autofit with a 300px width breakpoint to promote more responsive design. The CSS code for ```page-content``` is found in the following snippet:
 ```
 .page-content {
   height: auto;
