@@ -24,222 +24,161 @@ This website is built using HTML and CSS. It is made with the intention of being
 
 <img src="./home.PNG" width="600"/>
 
-This is the landing div on my website. 
+This is the landing div on my website. It has a video div, color layer div, and content div. The HTML code for the home page can be found in the snippet below:
 
-Orange
 ```
-  font-family: "Vibur", cursive;
-  font-style: italic;
-  text-shadow: 0 0 1vw #1041ff, 0 0 3vw #1041ff, 0 0 10vw #1041ff,
-    0 0 10vw #1041ff, 0 0 0.4vw #8bfdfe;
-  color: #28d7fe;
-```
-
-Blue
-```
-  font-family: "Vibur", cursive;
-  font-style: italic;
-  text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16,
-    0 0 10vw #fa1c16, 0 0 0.4vw #fed128;
-  color: #fed128;
-```
-
-
-The component can be imported and used as:
-```
-import AboutMe from './components/about-me';
-
-function App() {
-  return (
-    <div className="App">
-      <AboutMe />
-    </div>
-  );
-}
-
-export default App;
+        <header class="v-header container" id="Home">
+        
+            <div class="video-fullscreen-wrap">
+                <video autoplay muted loop id="backgroundVideo">
+                    <source src="backgroundVideo.mp4" autoplay loop muted type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="header-overlay"></div>
+            
+            <div class="header-content">
+                <h1>VANOUPHON SIRISOUK</h1>
+                <p>SOFTWARE DEVELOPER</p>
+                <a href="#Experience"><button>MORE</button></a>
+            </div>
+        </header>
 ```
 
 ### Side Nav
 
 <img src="./side-nav.PNG" width="150" height="400"/>
 
-This component page is a list of my past relevant experiences. Each experience is separated into its own div:
+The side navigation uses two simple JavaScript functions ```openSideMenu()``` and ```closeSideMenu()```. The component consists of two different divs, the ```hamburger-menu``` div and the ```side-nav``` div. When the link in the ```hamburger-menu``` div is clicked, the ```onclick``` will trigger the ```opensideMenu()``` function to display the ```side-nav``` div. When the ```side-nav``` div is open, there is a link when clicked, will trigger an ```onClick``` and cuase the ```closeSideMenu()``` function to run:
 
 ```
-  <div className="exp-div">
-    <div className="exp-title">Univeristy of Connecticut // CS & Mathematics Tutor </div>
-    <div className="exp-desc">Feb 2020 - May 2020 // Stamford, CT</div>
-    <div className="exp-desc">- Explained technical concepts and issues to students, clarifying confusion set upon student knowledge</div>
-    <div className="exp-desc">- Communicated Computer Science & Calculus curriculum to students, creating study plans and identifying missing knowledge for students</div>
-  </div>
-```
+        // HTML Code
+        
+        <nav class="navbar">
+            <span class="open-slide">
+                <a onclick="openSideMenu()">
+                    <img src="hamburger-menu.svg" alt="" class="hamburger-menu">
+                </a>
+            </span>
+        </nav>
 
-The component can be imported and used as:
-```
-import Experience from './components/experience';
-
-function App() {
-  return (
-    <div className="App">
-      <Experience />
-    </div>
-  );
-}
-
-export default App;
+        <div id="side-menu" class="side-nav">
+            <a class="btn-close" onclick="closeSideMenu()">&times;</a>
+            <a href="#Home">HOME</a>
+            <a href="#Experience">EXPERIENCE</a>
+            <a href="#Projects">PROJECTS</a>
+            <a href="#About">ABOUT ME</a>
+            <a href="#Info">INFO</a>
+        </div>
+        
+        
+        // JavaScript Code
+        
+        function openSideMenu() {
+          document.getElementById('side-menu').style.zIndex = '3';
+          document.getElementById('side-menu').style.width = '250px';
+          document.getElementById('side-menu').style.opacity = '0.95';
+        }
+        
+        function closeSideMenu() {
+          document.getElementById('side-menu').style.zIndex = '-1';
+          document.getElementById('side-menu').style.width = '0px';
+          document.getElementById('side-menu').style.opacity = '0';
+        }        
 ```
 
 ### Experience
 
 <img src="./experience.PNG" width="600"/>
 
-This component page is the first component in the website. It integrates the Navigation and Socials components within it. Below is the entire code for the Home component:
+This page lists off my relevant experience. Each experience item has its own div container labelled as ```exp```, the code for which is shown below:
 
 ```
-import React from 'react';
-import './componentCSS/home.css';
-import Navigation from './navigation';
-import Socials from './socials';
-
-function Home() {
-    return (
-        <div id="home">
-            <Socials />
-            <div className="neon-sign">
-                <div className="title">Vanouphon Sirisouk</div>
-                <div className="subtitle">software developer</div>
-            </div>
-            <Navigation />
-        </div>
-    );
-}
-
-export default Home;
-```
-
-The component can be imported and used as:
-```
-import Home from './components/home';
-
-function App() {
-  return (
-    <div className="App">
-      <Home />
-    </div>
-  );
-}
-
-export default App;
+                    <div class="exp">
+                        <h1><b>UNIVERSITY OF CONNECTICUT STAMFORD ENGINEER MAJORS</b> | FOUNDER</h1>
+                        <h2>AUG 2019 - PRESENT | Stamford, CT</h2>
+                        <p>- Collective body of students primarily in the School of Engineering at University of Connecticut Stamford regional campus</p>
+                        <p>- Attracted a total of 40+ students</p>
+                        <p>- Directed several teams of students, resulting in an overall reduction in stress & workload</p>
+                        <p>- Lead a team of 13 collaborative students, decreasing time spent on assignments by 30% - 40% on avg.</p>
+                    </div>
 ```
 
 ### Projects
 
 <img src="./projects.PNG" width="600"/>
 
-This component is a row of links to different components of my website. It uses flex and flex-wrap in order to build a more responsive styling:
+This page lists off all the current projects I had worked on at the time. All projects are contained in individual cards, the code for which can be found in the snippet below:
 ```
-  .nav-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 4rem;
-  margin-bottom: 8rem;
+<div class="card">
+                        <h1>!Picky 🥡 <b>[IN PROGRESS]</b></h1>
+                        <p>Restaurant Locator Web App. Built using ReactJs, Google Maps API, Places API, Geocoding API, and Material UI</p>
+                        <a href="https://github.com/Hi-Van/Not-Picky" target="_blank"><button>Code</button></a>
+                        <a href="https://not-picky.herokuapp.com/" target="_blank"><button>Demo</button></a>
+                    </div>
+```
+
+The project cards are contained within a parent div labelled ```cardContainer```. The ```cardContainer``` div also uses grid and autofit, with a breakpoint of 300px width per card. The CSS code can be found in the snippet below:
+
+```
+.cardContainer {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em;
 }
 ```
 
-The component can be imported and used as:
-```
-import Navigation from './navigation';
-
-function Home() {
-    return (
-        <div id="home">
-            <div className="neon-sign">
-                // more html
-            </div>
-            <Navigation />
-        </div>
-    );
-}
-
-export default Home;
-```
 ### About Me
 
 <img src="./about-me.PNG" width="600"/>
 
-This component is a row of links, the same as the navigation component, but uses a different text color and positioning. It also uses flex and wlex-wrap to promote a more responsive styling:
+The about me page is styled to mimic a paper with a orange background. It contains divs labelled ```abtSection``` to contain information into separate sections. An example of how the ```abtSection``` is used is found in the snippet below:
 
 ```
-.social-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+                <div class="abtSection">
+                    <h1>HOBBIES</h1>
+                    <p><b>DESTINY</b> Would be a shame if we'd 1v1'd</p>
+                    <p><b>PC BUILDING</b> Mine has RGB so it's faster</p>
+                    <p><b>BREAKDANCING</b> I've yet to break myself, so I'm probably doing it wrong</p>
+                    <p><b>MUSIC</b> I can play several instruments, just really badly</p>
+                    <p><b>WORKING OUT</b> I like being healthy</p>
+                    <p><b>ANIME</b> Still practicing my hand symbols for when the army tries to draft me</p>
+                </div>
+                        
+
+```
+
+Each ```abtSection``` div is contained a parent div labelled ```page-content```, which uses grid and autofit with a 300px width breakpoint to promote more responsive design. The CSS code for ```page-content``` is found in the following snippet:
+```
+.page-content {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em;
 }
-```
-
-This component can be import and used as:
-```
-import Socials from './socials';
-
-function Home() {
-    return (
-        <div id="home">
-            <Socials />
-            <div className="neon-sign">
-              // more html
-            </div>
-        </div>
-    );
-}
-
-export default Home;
 ```
 
 ### Contact Info
 
 <img src="./info.PNG" width="600"/>
 
-This component page displays the projects I have worked on so far. It integrates ```<HoverVideoPlayer videoSrc="Video Source Here">``` from the ```react-hover-video-player``` dependency, so it needs to be imported as ```import HoverVideoPlayer from 'react-hover-video-player';``` for it pause videos on hover. Each project is contained within an individual div, that uses grid and autofit in order to promote responsive styling:
+This component page displays a set of social links, contact information, as well as a legacy version of my resume. Each link is contained within a div labelled  ```contact```. An example of use from my website can be found in the snippet below:
 
 ```
-              <-HTML CODE->
-              
-              <div className="proj-div">
-                <HoverVideoPlayer className="proj-display" videoSrc={newPortfolio} autoplay="true" />
-                <div className="proj-text">
-                    <div className="exp-title">Portfolio Website V4</div>
-                    <div className="exp-desc">The newest iteration of my portfolio website, hosted by Github Pages. Built using CSS, ReactJS</div>
-                    <div>
-                        <a
-                            href="https://github.com/Hi-Van/portfolio"
-                            target="_blank" rel="noopener noreferrer"><button className="btn-alt">code</button></a>
-                    </div>
-                </div>
-            </div>
-            
-            <- CSS ->
-            
-            * The auto fit line means that the grid will create a new row when the grid items can no longer fit with a width of 300px to 1fr
-            .proj-div {
-              display: grid;
-              grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-              margin-bottom: 16rem;
-            }
+               <div class="contact">
+                   <h1>GITHUB</h1>
+                   <a href="https://github.com/Hi-Van" target="blank_">https://github.com/Hi-Van</a>
+               </div>
 ```
 
-The component can be imported and used as:
+Each of the ```contact``` divs are contained within a parent div labelled ```infoContainer```. The ```infocontainer``` parent div uses grid and autofit with a breakpoint of 300px width per ```contact```. The exact CSS code for the ```infoContainer``` div can be found in the following snippet:
 ```
-import Projects from './components/projects';
-
-
-function App() {
-  return (
-    <div className="App">
-      <Projects />
-    </div>
-  );
+.infoContainer {
+  margin-top: 10em;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 4em;
 }
-
-export default App;
 ```
